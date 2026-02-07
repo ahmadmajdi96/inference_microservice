@@ -48,4 +48,4 @@ If NVIDIA GPU is available, use the GPU compose file:
 If GPU is not available, use the default docker-compose.yml (CPU).
 
 Note: For RTX 50‑series (compute capability 12.0), the GPU image installs
-PyTorch nightly CUDA wheels to ensure kernel support.
+PyTorch nightly CUDA wheels to ensure kernel support (cu126).
