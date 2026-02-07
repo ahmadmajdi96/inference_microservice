@@ -1,4 +1,5 @@
 from pathlib import Path
+import shutil
 from datetime import datetime
 
 from fastapi import APIRouter, BackgroundTasks, File, HTTPException, UploadFile, Request
@@ -149,6 +150,14 @@ async def list_jobs(offset: int = 0, limit: int = 50):
     page = items[off:off + lim]
 
     return {"jobs": page, "total": total, "offset": off, "limit": lim}
+
+@router.delete("/jobs/{job_id}")
+async def delete_job(job_id: str):
+    job_dir = Path(settings.jobs_dir) / job_id
+    if not job_dir.exists():
+        raise HTTPException(status_code=404, detail="job not found")
+    shutil.rmtree(job_dir)
+    return {"status": "deleted", "job_id": job_id}
 
 
 @router.get("/jobs/{job_id}/results")
