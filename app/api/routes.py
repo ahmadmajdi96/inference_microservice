@@ -1,4 +1,5 @@
 from pathlib import Path
+from datetime import datetime
 
 from fastapi import APIRouter, BackgroundTasks, File, HTTPException, UploadFile, Request
 from fastapi.responses import FileResponse
@@ -117,6 +118,37 @@ async def get_job(job_id: str):
     if not job_dir.exists():
         raise HTTPException(status_code=404, detail="job not found")
     return load_status(job_dir)
+
+@router.get("/jobs")
+async def list_jobs(offset: int = 0, limit: int = 50):
+    jobs_dir = Path(settings.jobs_dir)
+    if not jobs_dir.exists():
+        return {"jobs": [], "total": 0, "offset": offset, "limit": limit}
+
+    items = []
+    for path in jobs_dir.iterdir():
+        if not path.is_dir():
+            continue
+        status = load_status(path)
+        try:
+            created = datetime.fromtimestamp(path.stat().st_mtime).isoformat()
+        except Exception:
+            created = ""
+        items.append({
+            "job_id": path.name,
+            "status": status.get("status", "UNKNOWN"),
+            "stage": status.get("stage", ""),
+            "updated_at": status.get("updated_at", ""),
+            "created_at": created,
+        })
+
+    items.sort(key=lambda x: x.get("created_at", ""), reverse=True)
+    total = len(items)
+    off = max(0, int(offset or 0))
+    lim = max(1, int(limit or 1))
+    page = items[off:off + lim]
+
+    return {"jobs": page, "total": total, "offset": off, "limit": lim}
 
 
 @router.get("/jobs/{job_id}/results")
