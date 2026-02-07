@@ -1,0 +1,958 @@
+{
+  "job_id": "e4b24f8f-5c1b-41f2-80f0-f937261d02c3",
+  "status": "SUCCEEDED",
+  "total_images": 1,
+  "images": [
+    {
+      "image": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/input/11.png",
+      "image_rel": "input/11.png",
+      "objects": [
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7889286875724792,
+          "bbox": [
+            205,
+            917,
+            352,
+            1091
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj001_product.jpg",
+          "crop_rel": "crops/11_obj001_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9815066980681405
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7796996831893921,
+          "bbox": [
+            818,
+            1367,
+            933,
+            1527
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj002_product.jpg",
+          "crop_rel": "crops/11_obj002_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9790629493444589
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7688194513320923,
+          "bbox": [
+            651,
+            685,
+            789,
+            861
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj003_product.jpg",
+          "crop_rel": "crops/11_obj003_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9960691564396309
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7677016258239746,
+          "bbox": [
+            250,
+            693,
+            389,
+            863
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj004_product.jpg",
+          "crop_rel": "crops/11_obj004_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9958223652125068
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7638471722602844,
+          "bbox": [
+            354,
+            918,
+            475,
+            1083
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj005_product.jpg",
+          "crop_rel": "crops/11_obj005_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.981216861040116
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7635932564735413,
+          "bbox": [
+            391,
+            691,
+            523,
+            863
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj006_product.jpg",
+          "crop_rel": "crops/11_obj006_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9921933001186695
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7631940841674805,
+          "bbox": [
+            936,
+            1369,
+            1048,
+            1537
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj007_product.jpg",
+          "crop_rel": "crops/11_obj007_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9774916309978163
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7527382969856262,
+          "bbox": [
+            0,
+            395,
+            77,
+            641
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj008_product.jpg",
+          "crop_rel": "crops/11_obj008_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9939841346651976
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7509083151817322,
+          "bbox": [
+            1148,
+            352,
+            1199,
+            611
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj009_product.jpg",
+          "crop_rel": "crops/11_obj009_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9827869488368971
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7505994439125061,
+          "bbox": [
+            525,
+            687,
+            648,
+            862
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj010_product.jpg",
+          "crop_rel": "crops/11_obj010_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9956212752667324
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7500641942024231,
+          "bbox": [
+            804,
+            382,
+            953,
+            621
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj011_product.jpg",
+          "crop_rel": "crops/11_obj011_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9944063835573326
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7500140070915222,
+          "bbox": [
+            735,
+            1121,
+            855,
+            1303
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj012_product.jpg",
+          "crop_rel": "crops/11_obj012_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9839454401780287
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7486242055892944,
+          "bbox": [
+            80,
+            390,
+            225,
+            642
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj013_product.jpg",
+          "crop_rel": "crops/11_obj013_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9916604589785474
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.747610867023468,
+          "bbox": [
+            609,
+            917,
+            742,
+            1067
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj014_product.jpg",
+          "crop_rel": "crops/11_obj014_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9855010824002943
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7468984723091125,
+          "bbox": [
+            500,
+            1121,
+            626,
+            1301
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj015_product.jpg",
+          "crop_rel": "crops/11_obj015_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9836574008293683
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7462597489356995,
+          "bbox": [
+            107,
+            698,
+            246,
+            865
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj016_product.jpg",
+          "crop_rel": "crops/11_obj016_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9916026341699212
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7459371089935303,
+          "bbox": [
+            665,
+            378,
+            803,
+            626
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj017_product.jpg",
+          "crop_rel": "crops/11_obj017_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9953316159907757
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7434595227241516,
+          "bbox": [
+            628,
+            1371,
+            742,
+            1521
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj018_product.jpg",
+          "crop_rel": "crops/11_obj018_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9845888404823103
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.742511510848999,
+          "bbox": [
+            1041,
+            361,
+            1145,
+            616
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj019_product.jpg",
+          "crop_rel": "crops/11_obj019_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9954769452025697
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7415004372596741,
+          "bbox": [
+            529,
+            386,
+            662,
+            631
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj020_product.jpg",
+          "crop_rel": "crops/11_obj020_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9945530185670269
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7410329580307007,
+          "bbox": [
+            642,
+            137,
+            806,
+            302
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj021_product.jpg",
+          "crop_rel": "crops/11_obj021_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9927860528766357
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7384938597679138,
+          "bbox": [
+            376,
+            1145,
+            496,
+            1310
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj022_product.jpg",
+          "crop_rel": "crops/11_obj022_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9826698896763318
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7366041541099548,
+          "bbox": [
+            743,
+            1368,
+            816,
+            1521
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj023_product.jpg",
+          "crop_rel": "crops/11_obj023_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9872249230912943
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7361572980880737,
+          "bbox": [
+            0,
+            116,
+            105,
+            316
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj024_product.jpg",
+          "crop_rel": "crops/11_obj024_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9812461526422264
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7342061996459961,
+          "bbox": [
+            480,
+            918,
+            606,
+            1081
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj025_product.jpg",
+          "crop_rel": "crops/11_obj025_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9907542464022177
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.731907844543457,
+          "bbox": [
+            628,
+            1123,
+            733,
+            1303
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj026_product.jpg",
+          "crop_rel": "crops/11_obj026_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.992036305471014
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7303828597068787,
+          "bbox": [
+            431,
+            1375,
+            544,
+            1524
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj027_product.jpg",
+          "crop_rel": "crops/11_obj027_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9733509505164802
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7261782288551331,
+          "bbox": [
+            48,
+            916,
+            192,
+            1087
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj028_product.jpg",
+          "crop_rel": "crops/11_obj028_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9813973327230042
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7211002111434937,
+          "bbox": [
+            228,
+            400,
+            374,
+            641
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj029_product.jpg",
+          "crop_rel": "crops/11_obj029_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9943326814677632
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7183067798614502,
+          "bbox": [
+            955,
+            366,
+            1039,
+            616
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj030_product.jpg",
+          "crop_rel": "crops/11_obj030_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9905931625541974
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7171145081520081,
+          "bbox": [
+            278,
+            121,
+            440,
+            310
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj031_product.jpg",
+          "crop_rel": "crops/11_obj031_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9951195716532786
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.712631106376648,
+          "bbox": [
+            752,
+            916,
+            884,
+            1069
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj032_product.jpg",
+          "crop_rel": "crops/11_obj032_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9857567794410662
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7119960784912109,
+          "bbox": [
+            377,
+            381,
+            528,
+            635
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj033_product.jpg",
+          "crop_rel": "crops/11_obj033_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.994435568889163
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.7076401710510254,
+          "bbox": [
+            1030,
+            907,
+            1152,
+            1065
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj034_product.jpg",
+          "crop_rel": "crops/11_obj034_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9856244183252828
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.700122058391571,
+          "bbox": [
+            890,
+            677,
+            1013,
+            856
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj035_product.jpg",
+          "crop_rel": "crops/11_obj035_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9960902823696383
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6979273557662964,
+          "bbox": [
+            341,
+            1377,
+            430,
+            1526
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj036_product.jpg",
+          "crop_rel": "crops/11_obj036_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9890660087380259
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6958115696907043,
+          "bbox": [
+            891,
+            911,
+            1028,
+            1068
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj037_product.jpg",
+          "crop_rel": "crops/11_obj037_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9674433311043897
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6955241560935974,
+          "bbox": [
+            1058,
+            1123,
+            1158,
+            1298
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj038_product.jpg",
+          "crop_rel": "crops/11_obj038_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9785051105681241
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6940297484397888,
+          "bbox": [
+            162,
+            1378,
+            263,
+            1538
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj039_product.jpg",
+          "crop_rel": "crops/11_obj039_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9824707468065187
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6859778761863708,
+          "bbox": [
+            858,
+            1131,
+            960,
+            1301
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj040_product.jpg",
+          "crop_rel": "crops/11_obj040_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9883849417940507
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6827536821365356,
+          "bbox": [
+            1020,
+            672,
+            1153,
+            845
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj041_product.jpg",
+          "crop_rel": "crops/11_obj041_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9969170948881524
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6817482709884644,
+          "bbox": [
+            790,
+            682,
+            889,
+            859
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj042_product.jpg",
+          "crop_rel": "crops/11_obj042_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9970012326187256
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6743327379226685,
+          "bbox": [
+            482,
+            140,
+            638,
+            303
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj043_product.jpg",
+          "crop_rel": "crops/11_obj043_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9919129917492716
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6712685823440552,
+          "bbox": [
+            116,
+            151,
+            273,
+            311
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj044_product.jpg",
+          "crop_rel": "crops/11_obj044_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9909000646513303
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6667777299880981,
+          "bbox": [
+            962,
+            1133,
+            1057,
+            1298
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj045_product.jpg",
+          "crop_rel": "crops/11_obj045_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9889622575277928
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6664221286773682,
+          "bbox": [
+            0,
+            698,
+            105,
+            869
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj046_product.jpg",
+          "crop_rel": "crops/11_obj046_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.992457209049199
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6607862114906311,
+          "bbox": [
+            1052,
+            1375,
+            1158,
+            1537
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj047_product.jpg",
+          "crop_rel": "crops/11_obj047_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9782080841883052
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6538881063461304,
+          "bbox": [
+            546,
+            1373,
+            625,
+            1522
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj048_product.jpg",
+          "crop_rel": "crops/11_obj048_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9832006731766552
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6506625413894653,
+          "bbox": [
+            42,
+            1385,
+            159,
+            1545
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj049_product.jpg",
+          "crop_rel": "crops/11_obj049_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9855274001111746
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6492939591407776,
+          "bbox": [
+            275,
+            1148,
+            374,
+            1309
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj050_product.jpg",
+          "crop_rel": "crops/11_obj050_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9807079169206631
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6446229219436646,
+          "bbox": [
+            1157,
+            671,
+            1199,
+            851
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj051_product.jpg",
+          "crop_rel": "crops/11_obj051_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.879053832755938
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6431921124458313,
+          "bbox": [
+            266,
+            1378,
+            339,
+            1540
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj052_product.jpg",
+          "crop_rel": "crops/11_obj052_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.985430384604608
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6425074338912964,
+          "bbox": [
+            814,
+            112,
+            991,
+            299
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj053_product.jpg",
+          "crop_rel": "crops/11_obj053_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9882501702177907
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6181803345680237,
+          "bbox": [
+            1015,
+            156,
+            1152,
+            289
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj054_product.jpg",
+          "crop_rel": "crops/11_obj054_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9837300271230934
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.6013702750205994,
+          "bbox": [
+            1155,
+            907,
+            1199,
+            1067
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj055_product.jpg",
+          "crop_rel": "crops/11_obj055_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9684620147405716
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.5882936716079712,
+          "bbox": [
+            1160,
+            1375,
+            1199,
+            1535
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj056_product.jpg",
+          "crop_rel": "crops/11_obj056_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9383871197587836
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.5846456289291382,
+          "bbox": [
+            155,
+            1159,
+            271,
+            1316
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj057_product.jpg",
+          "crop_rel": "crops/11_obj057_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9735032208811634
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.5655988454818726,
+          "bbox": [
+            1162,
+            1118,
+            1199,
+            1295
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj058_product.jpg",
+          "crop_rel": "crops/11_obj058_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9446433742274273
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.5573658347129822,
+          "bbox": [
+            43,
+            1157,
+            155,
+            1323
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj059_product.jpg",
+          "crop_rel": "crops/11_obj059_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9887538290683844
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.5291683077812195,
+          "bbox": [
+            0,
+            1161,
+            40,
+            1326
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj060_product.jpg",
+          "crop_rel": "crops/11_obj060_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9614562356131832
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.4840957820415497,
+          "bbox": [
+            1157,
+            135,
+            1199,
+            288
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj061_product.jpg",
+          "crop_rel": "crops/11_obj061_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9386670447229132
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.45427870750427246,
+          "bbox": [
+            0,
+            1388,
+            39,
+            1549
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj062_product.jpg",
+          "crop_rel": "crops/11_obj062_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.8863005342600265
+        },
+        {
+          "label": "product",
+          "class_id": 0,
+          "confidence": 0.32640036940574646,
+          "bbox": [
+            0,
+            925,
+            47,
+            1091
+          ],
+          "crop": "/jobs/e4b24f8f-5c1b-41f2-80f0-f937261d02c3/crops/11_obj063_product.jpg",
+          "crop_rel": "crops/11_obj063_product.jpg",
+          "pred_label": "UNKNOWN",
+          "pred_confidence": 0.9895196793430622
+        }
+      ]
+    }
+  ]
+}

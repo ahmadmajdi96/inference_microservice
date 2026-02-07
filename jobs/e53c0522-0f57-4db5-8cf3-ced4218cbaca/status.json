@@ -1,0 +1,7 @@
+{
+  "job_id": "e53c0522-0f57-4db5-8cf3-ced4218cbaca",
+  "status": "FAILED",
+  "stage": "processing",
+  "updated_at": "2026-02-06T13:19:43.910921+00:00",
+  "error": "X has 1152 features, but LogisticRegression is expecting 896 features as input."
+}
