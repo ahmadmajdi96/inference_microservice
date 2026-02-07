@@ -1,7 +1,0 @@
-{
-  "job_id": "2e56feae-06e9-4a7d-acfe-f32d9acd9c36",
-  "status": "FAILED",
-  "stage": "extract_zip",
-  "updated_at": "2026-02-06T13:42:27.499955+00:00",
-  "error": "uploaded file is not a zip"
-}

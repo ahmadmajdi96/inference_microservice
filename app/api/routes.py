@@ -6,8 +6,15 @@ from fastapi.responses import FileResponse
 from app.core.config import settings
 from app.services.io import extract_zip
 from app.services.jobs import create_job, process_job, load_status, write_status
+from app.services.models import load_models
 
 router = APIRouter(prefix="/v1", tags=["inference"])
+
+ALLOWED_MODEL_FILES = {
+    "logreg_classifier.pkl",
+    "label_encoder.pkl",
+    "yolo_best.pt",
+}
 
 
 def _save_upload(file: UploadFile, dest: Path) -> None:
@@ -26,6 +33,41 @@ def _is_within(path: Path, base: Path) -> bool:
         return True
     except ValueError:
         return False
+
+
+@router.post("/models/reload")
+async def upload_models(
+    request: Request,
+    files: list[UploadFile] = File(...),
+):
+    if not files:
+        raise HTTPException(status_code=400, detail="At least one model file is required")
+
+    if len(files) > 3:
+        raise HTTPException(status_code=400, detail="At most three model files are allowed")
+
+    for f in files:
+        if not f.filename or f.filename not in ALLOWED_MODEL_FILES:
+            raise HTTPException(
+                status_code=400,
+                detail=f"Invalid model filename: {f.filename}. Allowed: {sorted(ALLOWED_MODEL_FILES)}",
+            )
+
+    models_dir = Path(settings.models_dir)
+    models_dir.mkdir(parents=True, exist_ok=True)
+
+    # Save uploaded files
+    for f in files:
+        dest = models_dir / f.filename
+        _save_upload(f, dest)
+
+    # Reload models
+    request.app.state.models = load_models()
+
+    return {
+        "status": "reloaded",
+        "updated": [f.filename for f in files],
+    }
 
 
 @router.post("/infer/image")
