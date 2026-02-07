@@ -40,3 +40,9 @@ Notes
 - Jobs output lives under ./jobs/JOB_ID.
 - Ensure CLIP/DINO configs match training. Default CLIP model is ViT-B/32 (feature dim 512).
 - Annotated images are saved under ./jobs/JOB_ID/annotated and are referenced in results.json.
+
+GPU (optional)
+If NVIDIA GPU is available, use the GPU compose file:
+  docker compose -f docker-compose.gpu.yml up --build
+
+If GPU is not available, use the default docker-compose.yml (CPU).

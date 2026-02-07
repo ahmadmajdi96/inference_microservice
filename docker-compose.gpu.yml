@@ -1,0 +1,23 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.gpu
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8001"]
+    environment:
+      - MODELS_DIR=/models
+      - JOBS_DIR=/jobs
+      - YOLOV8_WEIGHTS=/models/yolo_best.pt
+      - LOGREG_PATH=/models/logreg_classifier.pkl
+      - LABEL_ENCODER_PATH=/models/label_encoder.pkl
+      - CLIP_MODEL=ViT-B/32
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - ./models:/models
+      - ./jobs:/jobs
+    ports:
+      - "8001:8001"
+    device_requests:
+      - driver: nvidia
+        count: 1
+        capabilities: ["gpu"]
