@@ -19,4 +19,7 @@ class Settings(BaseSettings):
 
     device: str | None = None
 
+    shelf_gap_ratio: float = 0.6
+    shelf_gap_min_px: int = 40
+
 settings = Settings()

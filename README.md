@@ -40,6 +40,7 @@ Notes
 - Jobs output lives under ./jobs/JOB_ID.
 - Ensure CLIP/DINO configs match training. Default CLIP model is ViT-B/32 (feature dim 512).
 - Annotated images are saved under ./jobs/JOB_ID/annotated and are referenced in results.json.
+- Shelf clustering can be tuned with env vars: SHELF_GAP_RATIO (default 0.6) and SHELF_GAP_MIN_PX (default 40).
 
 GPU (optional)
 If NVIDIA GPU is available, use the GPU compose file:

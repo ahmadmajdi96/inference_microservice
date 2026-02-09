@@ -6,6 +6,7 @@ from typing import Callable
 
 from PIL import Image
 
+from app.core.config import settings
 from app.services.io import list_images, rel_or_abs
 from app.services.segmentation import segment_image
 from app.services.classification import classify_crops
@@ -74,7 +75,7 @@ def process_job(store: ModelStore, job_dir: Path, input_dir: Path) -> None:
 
             centers.sort(key=lambda x: x[0])
             median_h = sorted(heights)[len(heights) // 2]
-            gap_thresh = max(image_h * 0.08, median_h * 1.2)
+            gap_thresh = max(settings.shelf_gap_min_px, median_h * settings.shelf_gap_ratio)
 
             shelves = []
             current = []
