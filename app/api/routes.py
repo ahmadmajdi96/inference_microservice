@@ -2,7 +2,7 @@ from pathlib import Path
 import shutil
 from datetime import datetime
 
-from fastapi import APIRouter, BackgroundTasks, File, HTTPException, UploadFile, Request
+from fastapi import APIRouter, BackgroundTasks, File, HTTPException, UploadFile, Request, Form
 from fastapi.responses import FileResponse
 
 from app.core.config import settings
@@ -77,7 +77,7 @@ async def infer_image(
     request: Request,
     background_tasks: BackgroundTasks,
     file: UploadFile = File(...),
-    planogram_json: str | None = None,
+    planogram_json: str | None = Form(None),
 ):
     job_id, job_dir = create_job(Path(settings.jobs_dir))
     input_dir = job_dir / "input"
@@ -96,7 +96,7 @@ async def infer_zip(
     request: Request,
     background_tasks: BackgroundTasks,
     file: UploadFile = File(...),
-    planogram_json: str | None = None,
+    planogram_json: str | None = Form(None),
 ):
     job_id, job_dir = create_job(Path(settings.jobs_dir))
     input_dir = job_dir / "input"
