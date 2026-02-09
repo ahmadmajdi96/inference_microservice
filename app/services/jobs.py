@@ -43,7 +43,7 @@ def load_status(job_dir: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8") or "{}")
 
 
-def process_job(store: ModelStore, job_dir: Path, input_dir: Path) -> None:
+def process_job(store: ModelStore, job_dir: Path, input_dir: Path, planogram_json: str | None = None) -> None:
     write_status(job_dir, "RUNNING", stage="segmentation")
 
     crops_dir = job_dir / "crops"
@@ -97,6 +97,15 @@ def process_job(store: ModelStore, job_dir: Path, input_dir: Path) -> None:
             for idx, shelf in enumerate(shelves, start=1):
                 ys = [y for y, _ in shelf]
                 objs = [o for _, o in shelf]
+                # Sort by x-center for left-to-right indexing
+                objs_sorted = sorted(
+                    objs,
+                    key=lambda o: ((o.get("bbox", [0, 0, 0, 0])[0] + o.get("bbox", [0, 0, 0, 0])[2]) / 2.0),
+                )
+                for i, obj in enumerate(objs_sorted, start=1):
+                    obj["shelf_index"] = idx
+                    obj["index_in_shelf"] = i
+                classes_left_to_right = [str(o.get("pred_label") or "UNKNOWN") for o in objs_sorted]
                 known = [o for o in objs if (o.get("pred_label") or "").upper() != "UNKNOWN"]
                 unknown = [o for o in objs if (o.get("pred_label") or "").upper() == "UNKNOWN"]
                 class_counts = {}
@@ -111,6 +120,7 @@ def process_job(store: ModelStore, job_dir: Path, input_dir: Path) -> None:
                     "known_count": len(known),
                     "unknown_count": len(unknown),
                     "class_counts": class_counts,
+                    "classes_left_to_right": classes_left_to_right,
                 })
                 total_known += len(known)
                 total_unknown += len(unknown)
@@ -123,12 +133,41 @@ def process_job(store: ModelStore, job_dir: Path, input_dir: Path) -> None:
                 "total_objects": total_objects,
             }
 
+        planogram = None
+        if planogram_json:
+            try:
+                planogram = json.loads(planogram_json)
+            except Exception:
+                planogram = None
+
         for image_path in images:
             objects, annotated = segment_image(store, image_path, crops_dir, job_dir)
             objects = classify_crops(store, objects)
             with Image.open(image_path) as img:
                 _, image_h = img.size
             shelves = _shelf_summary(objects, image_h)
+            compliance = None
+            if planogram:
+                expected = planogram.get("planogram") if isinstance(planogram, dict) else None
+                if isinstance(expected, list) and shelves.get("shelves"):
+                    total_expected = 0
+                    total_match = 0
+                    for idx, shelf in enumerate(shelves["shelves"]):
+                        if idx >= len(expected):
+                            break
+                        exp_list = expected[idx] if isinstance(expected[idx], list) else []
+                        det_list = shelf.get("classes_left_to_right") or []
+                        total_expected += len(exp_list)
+                        for pos, exp in enumerate(exp_list):
+                            if pos < len(det_list) and det_list[pos] == exp:
+                                total_match += 1
+                    if total_expected > 0:
+                        compliance = {
+                            "match_score": total_match / total_expected,
+                            "match_percent": round((total_match / total_expected) * 100, 2),
+                            "total_expected": total_expected,
+                            "total_matched": total_match,
+                        }
             results["images"].append({
                 "image": str(image_path),
                 "image_rel": rel_or_abs(image_path, job_dir),
@@ -136,6 +175,8 @@ def process_job(store: ModelStore, job_dir: Path, input_dir: Path) -> None:
                 "annotated_rel": annotated.get("annotated_rel"),
                 "objects": objects,
                 "shelves": shelves,
+                "planogram": planogram,
+                "compliance": compliance,
             })
 
         results_path = job_dir / "results.json"

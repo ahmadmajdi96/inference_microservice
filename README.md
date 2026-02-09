@@ -41,6 +41,9 @@ Notes
 - Ensure CLIP/DINO configs match training. Default CLIP model is ViT-B/32 (feature dim 512).
 - Annotated images are saved under ./jobs/JOB_ID/annotated and are referenced in results.json.
 - Shelf clustering can be tuned with env vars: SHELF_GAP_RATIO (default 0.6) and SHELF_GAP_MIN_PX (default 40).
+- You can send a planogram JSON payload in `planogram_json` (multipart field). Example:
+  {"planogram":[["joy-orange-1-litre","joy-lemon-1-litre"],["joy-cola-1-litre"]]}
+  Results will include `classes_left_to_right` per shelf and a `compliance` score.
 
 GPU (optional)
 If NVIDIA GPU is available, use the GPU compose file:

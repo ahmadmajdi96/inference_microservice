@@ -77,6 +77,7 @@ async def infer_image(
     request: Request,
     background_tasks: BackgroundTasks,
     file: UploadFile = File(...),
+    planogram_json: str | None = None,
 ):
     job_id, job_dir = create_job(Path(settings.jobs_dir))
     input_dir = job_dir / "input"
@@ -86,7 +87,7 @@ async def infer_image(
     _save_upload(file, input_path)
     write_status(job_dir, "QUEUED", stage="upload")
 
-    background_tasks.add_task(process_job, request.app.state.models, job_dir, input_dir)
+    background_tasks.add_task(process_job, request.app.state.models, job_dir, input_dir, planogram_json)
     return {"job_id": job_id, "status": "QUEUED"}
 
 
@@ -95,6 +96,7 @@ async def infer_zip(
     request: Request,
     background_tasks: BackgroundTasks,
     file: UploadFile = File(...),
+    planogram_json: str | None = None,
 ):
     job_id, job_dir = create_job(Path(settings.jobs_dir))
     input_dir = job_dir / "input"
@@ -109,7 +111,7 @@ async def infer_zip(
         raise HTTPException(status_code=400, detail=str(exc))
 
     write_status(job_dir, "QUEUED", stage="extract_zip")
-    background_tasks.add_task(process_job, request.app.state.models, job_dir, input_dir)
+    background_tasks.add_task(process_job, request.app.state.models, job_dir, input_dir, planogram_json)
     return {"job_id": job_id, "status": "QUEUED"}
 
 
